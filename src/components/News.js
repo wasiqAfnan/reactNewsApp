@@ -15,9 +15,9 @@ function News({ category }) {
             URL += `&apiKey=${process.env.REACT_APP_API_KEY}`;
             try{
 
-                // let response = await fetch(URL);
-                // let data = await response.json();
-                // setNewsArticles(data.articles);
+                let response = await fetch(URL);
+                let data = await response.json();
+                setNewsArticles(data.articles);
             }
             catch(error){
                 console.log("error occured",error);
